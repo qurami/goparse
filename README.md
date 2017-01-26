@@ -8,9 +8,7 @@ Simple Parse API client written in pure Go.
 `go get github.com/qurami/goparse`
 
 
-## Usage
-
-A complete example follows.
+## Usage example
 
 ```
 import (
