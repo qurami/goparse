@@ -1,5 +1,8 @@
 # goparse
 
+[![Build Status](https://circleci.com/gh/qurami/goparse.svg?style=shield)](https://circleci.com/gh/qurami/goparse)
+[![Go Report Card](https://goreportcard.com/badge/github.com/qurami/goparse)](https://goreportcard.com/badge/github.com/qurami/goparse)
+
 Simple Parse API client written in pure Go.
 
 
