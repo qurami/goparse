@@ -126,6 +126,9 @@ func (c *ParseClient) prepareHTTPRequest(method string, resourceURI string, body
 
 	if body == nil {
 		req, err = http.NewRequest(method, requestURL, nil)
+		if err != nil {
+			return nil, err
+		}
 	} else {
 		jsonBody, err := json.Marshal(body)
 		if err != nil {
@@ -134,9 +137,9 @@ func (c *ParseClient) prepareHTTPRequest(method string, resourceURI string, body
 
 		requestBodyReader := bytes.NewReader(jsonBody)
 		req, err = http.NewRequest(method, requestURL, requestBodyReader)
-	}
-	if err != nil {
-		return nil, err
+		if err != nil {
+			return nil, err
+		}
 	}
 
 	req.Header.Set(contentTypeHeader, "application/json")
