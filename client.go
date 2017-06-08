@@ -54,23 +54,23 @@ func (c *ParseClient) SetMasterKey(masterKey string) {
 
 // Get performs an http GET method call on the given resource uri.
 func (c *ParseClient) Get(resourceURI string) (*http.Response, error) {
-	return c.do(http.MethodGet, resourceURI, nil)
+	return c.do("GET", resourceURI, nil)
 }
 
 // Post performs an http POST method call on the given resource uri with the given body.
 func (c *ParseClient) Post(resourceURI string, body interface{}) (*http.Response, error) {
-	return c.do(http.MethodPost, resourceURI, body)
+	return c.do("POST", resourceURI, body)
 }
 
 // Put performs an http PUT method call on the given resource uri with the given body.
 func (c *ParseClient) Put(resourceURI string, body interface{}) (*http.Response, error) {
-	return c.do(http.MethodPut, resourceURI, body)
+	return c.do("PUT", resourceURI, body)
 }
 
 // Delete performs an http DELETE method call on the given resource uri and unmarshals
 // response into result.
 func (c *ParseClient) Delete(resourceURI string) (*http.Response, error) {
-	return c.do(http.MethodDelete, resourceURI, nil)
+	return c.do("DELETE", resourceURI, nil)
 }
 
 // do build and executes the HTTP request for the given method, resource URI and body.
